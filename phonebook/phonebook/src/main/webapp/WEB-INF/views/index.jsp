@@ -17,9 +17,9 @@
 
         </div>
         <h1 class="display-3">Witaj na stronie głównej </h1>
-        <button><a href="${contextPath}">Wyszujkaj kontakt</a></button>
+        <button><a href="${contextPath}/records/search">Wyszujkaj kontakt</a></button>
         <button><a href="${contextPath}/records/list">Wszystkie kontanty</a></button>
-        <button><a href="${contextPath}/records/edit">Dodoaj kontanty</a></button>
+        <button><a href="${contextPath}/records/form">Dodoaj kontanty</a></button>
         <br>
     </div>
 </main>

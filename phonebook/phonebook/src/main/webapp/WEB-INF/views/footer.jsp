@@ -10,7 +10,7 @@
 
 <footer class="footer mt-auto py-3">
 <div class="container">
-    <span class="text-muted">Phonebook by Magdalena Koboiałka 2020</span>
+    <span class="text-muted">Phonebook by Magdalena Kobiałka 2020</span>
 </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

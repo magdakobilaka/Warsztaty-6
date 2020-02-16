@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<jsp:include page="views/header.jsp"/>
+<jsp:include page="/WEB-INF/views/header.jsp"/>
 <c:url value="/" var="mainURL"/>
 <main role="main" class="flex-shrink-0">
     <br>
@@ -21,17 +21,6 @@
                     <h4 class="cover-heading">Lista Kontaktów</h4>
                 </div>
             </div>
-            <button>
-                <a href="${contextPath}">Dodaj nowy numer</a>
-            </button>
-            <button>
-                <a href="/">Back</a>
-            </button>
-            <button>
-                <a href="${contextPath}/filters">Filters</a>
-            </button>
-
-
             <c:choose>
                 <c:when test="${records.size() == 0}">
                     <h1 class="error">Nie znaleziono kontaktów</h1>
@@ -41,27 +30,27 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Surname</th>
-                            <th>Name</th>
-                            <th>Citi</th>
-                            <th>Street</th>
-                            <th>Flatnumber</th>
-                            <th>Phonenumber</th>
+                            <th>Nzwisko</th>
+                            <th>Imie</th>
+                            <th>Miasto</th>
+                            <th>Ulica</th>
+                            <th>Numer mieszkania</th>
+                            <th>Numer telefonu</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${records}" var="record">
+                        <c:forEach items="${record}" var="record">
                             <tr>
                                 <td>${record.id}</td>
                                 <td>${record.surname}</td>
                                 <td>${record.name}</td>
-                                <td>${record.citi}</td>
+                                <td>${record.city}</td>
                                 <td>${record.street}</td>
                                 <td>${record.flatnumber}</td>
                                 <td>${record.phonenumber}</td>
                                 <td>
-                                    <button><a href="${contextPath}/edit/${record.id}"> Edit </a></button>
-                                    <button><a href="${contextPath}/delete/${record.id}"> Delete </a></button>
+                                    <button><a href="${contextPath}edit/${record.id}">Aktualizuj </a></button>
+                                    <button><a href="${contextPath}delete/${record.id}">Usuń</a></button>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -72,4 +61,4 @@
         </div>
     </div>
 </main>
-<jsp:include page="views/footer.jsp"/>
+<jsp:include page="/WEB-INF/views/footer.jsp"/>

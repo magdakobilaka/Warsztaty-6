@@ -24,7 +24,7 @@ public class Record {
     private String surname;
     @NotNull
     private String name;
-    private String citi;
+    private String city;
     private String street;
     private String flatnumber;
     @NotNull
